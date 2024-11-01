@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
     });
   } else if (url.indexOf(".js")) {
     // 返回script.js文件
-    const scriptPath = path.join(__dirname, "script.js");
+    const scriptPath = path.join(__dirname, url);
     fs.readFile(scriptPath, "utf8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
     });
   } else if (url.includes(".css")) {
     // 返回style.css文件
-    const stylePath = path.join(__dirname, "style.css");
+    const stylePath = path.join(__dirname, url);
     fs.readFile(stylePath, "utf8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
