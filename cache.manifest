@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 版本号或注释
+
+CACHE:
+/script.js
+
+NETWORK:
+*
+
+FALLBACK:
